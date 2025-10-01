@@ -36,7 +36,7 @@ export default function DownloadLinks({ links }: DownloadLinksProps) {
   }, [links]);
 
   return (
-    <Card className="bg-accent/10 border-accent/20">
+    <Card className="bg-card/50">
       <CardHeader>
         <CardTitle className="font-headline text-2xl text-accent">Download Links</CardTitle>
         <CardDescription>
@@ -59,7 +59,7 @@ export default function DownloadLinks({ links }: DownloadLinksProps) {
           <ul className="space-y-3">
             {validLinks.map((link, index) => (
               <li key={index}>
-                <Button asChild className="w-full md:w-auto bg-accent hover:bg-accent/90">
+                <Button asChild className="w-full md:w-auto bg-primary hover:bg-primary/80">
                   <a href={link} target="_blank" rel="noopener noreferrer">
                     <Download className="mr-2 h-4 w-4" />
                     Download Option {index + 1}

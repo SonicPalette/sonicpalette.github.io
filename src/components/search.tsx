@@ -77,7 +77,7 @@ export default function Search({ allMovies }: { allMovies: Movie[] }) {
           <Input
             type="search"
             placeholder="Search for a movie like 'Inception'..."
-            className="w-full pl-10 pr-4 py-6 text-lg bg-card border-2 border-transparent focus:border-primary focus:bg-background transition-all"
+            className="w-full pl-10 pr-4 py-6 text-lg bg-secondary border-2 border-transparent focus:border-primary focus:bg-background transition-all"
             value={query}
             onChange={e => setQuery(e.target.value)}
             onFocus={() => query.length > 1 && setIsOpen(true)}
@@ -89,7 +89,7 @@ export default function Search({ allMovies }: { allMovies: Movie[] }) {
         </div>
       </form>
       {isOpen && (
-        <Card className="absolute top-full mt-2 w-full z-10 shadow-2xl animate-fade-in-up">
+        <Card className="absolute top-full mt-2 w-full z-10 shadow-2xl animate-fade-in-up bg-popover">
           <CardContent className="p-2">
             {suggestions.length > 0 ? (
               <ul className="space-y-1">
