@@ -1,7 +1,7 @@
 'use client';
 
 import { filterDownloadLinks } from '@/ai/flows/filter-download-links';
-import { Download, Link as LinkIcon, Loader2 } from 'lucide-react';
+import { Download, Link as LinkIcon, Loader2, AlertTriangle } from 'lucide-react';
 import { useEffect, useState, useTransition } from 'react';
 import {
   Card,
@@ -12,7 +12,6 @@ import {
 } from './ui/card';
 import { Button } from './ui/button';
 import { Alert, AlertDescription, AlertTitle } from './ui/alert';
-import { ExclamationTriangleIcon } from '@radix-ui/react-icons';
 
 type DownloadLinksProps = {
   links: string[];
@@ -51,7 +50,7 @@ export default function DownloadLinks({ links }: DownloadLinksProps) {
           </div>
         ) : error ? (
           <Alert variant="destructive">
-            <ExclamationTriangleIcon className="h-4 w-4" />
+            <AlertTriangle className="h-4 w-4" />
             <AlertTitle>Error</AlertTitle>
             <AlertDescription>{error}</AlertDescription>
           </Alert>
