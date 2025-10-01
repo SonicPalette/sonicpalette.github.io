@@ -1,1 +1,6 @@
-// Flows will be imported for their side effects in this file.
+import { config } from 'dotenv';
+config();
+
+import '@/ai/flows/search-suggestions.ts';
+import '@/ai/flows/filter-download-links.ts';
+import '@/ai/flows/enrich-movie-details.ts';
